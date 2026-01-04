@@ -18,11 +18,13 @@ VS Code (optional but recommended)
 
 🔧 Environment Setup
 
-1️⃣ Follow This Guide to setup React Native Environemnt.
+Follow This Guide to setup React Native Environemnt.
+https://reactnative.dev/docs/set-up-your-environment
 
-📦 Clone the repo && Install Dependencies using npm install
+Node version tested on:- v23.10.0
+📦 Clone the repo && Install Dependencies using npm install.
 
-▶️ Then ,Run the App on Android using npm run android.
+▶️ Then ,Run the App on Android using "npm run android".
 
 
 📁 **Project Structure **
@@ -46,9 +48,7 @@ VS Code (optional but recommended)
 ├── tree.txt
 └── tsconfig.json
 ```
-🏗 Build Production APK (Optional)
-cd android
-./gradlew assembleRelease
+
 
 ⭐️ Dependencies Used
 

@@ -1,5 +1,7 @@
 🚀 Prerequisites
 
+***This project does not uses expo.***
+
 Make sure you have the following installed on your system:
 
 Node.js (LTS recommended)
@@ -65,6 +67,7 @@ yarn install
 npx react-native start
 
 or
+
 npm run android
 
 Keep this terminal open.
@@ -98,15 +101,27 @@ cd ..
 Clear Metro cache
 npx react-native start --reset-cache
 
-📁 Project Structure (Important)
-project-root/
-├── android/
-├── ios/
-├── src/
+📁 **Project Structure **
+```
 ├── App.jsx
+├── Gemfile
+├── README.md
+├── __tests__
+├── android
+├── app.json
+├── babel.config.js
+├── images
+├── index.js
+├── ios
+├── jest.config.js
+├── metro.config.js
+├── node_modules
+├── package-lock.json
 ├── package.json
-└── README.md
-
+├── src
+├── tree.txt
+└── tsconfig.json
+```
 🏗 Build Production APK (Optional)
 cd android
 ./gradlew assembleRelease

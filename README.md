@@ -17,89 +17,13 @@ Android SDK
 VS Code (optional but recommended)
 
 🔧 Environment Setup
-1️⃣ Install React Native community CLI
 
-2️⃣ Configure Android SDK
+1️⃣ Follow This Guide to setup React Native Environemnt.
 
-Open Android Studio → Settings → SDK Manager
+📦 Clone the repo && Install Dependencies using npm install
 
-Make sure these are installed:
+▶️ Then ,Run the App on Android using npm run android.
 
-Android SDK Platform (latest)
-
-Android SDK Platform-Tools
-
-Android SDK Build-Tools
-
-3️⃣ Set Environment Variables
-macOS / Linux (~/.bashrc or ~/.zshrc)
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-Windows (System Environment Variables)
-
-Add:
-
-ANDROID_HOME = C:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
-
-Add to Path:
-
-platform-tools
-
-emulator
-
-Restart terminal after this step.
-
-📦 Install Dependencies
-
-From the project root directory:
-
-npm install
-
-
-or if using yarn:
-
-yarn install
-
-▶️ Run the App on Android
-1️⃣ Start Metro Bundler
-npx react-native start
-
-or
-
-npm run android
-
-Keep this terminal open.
-
-2️⃣ Run on Android Emulator or Device
-
-In a new terminal:
-
-npx react-native run-android
-
-
-✅ Make sure:
-
-Emulator is running OR
-
-Physical device is connected with USB debugging enabled
-
-🧹 If You Face Errors (Common Fix)
-Clean Android build
-cd android
-./gradlew clean
-cd ..
-
-
-Windows:
-
-cd android
-gradlew clean
-cd ..
-
-Clear Metro cache
-npx react-native start --reset-cache
 
 📁 **Project Structure **
 ```
@@ -126,8 +50,30 @@ npx react-native start --reset-cache
 cd android
 ./gradlew assembleRelease
 
+⭐️ Dependencies Used
 
-APK location:
+@react-native-community/blur
 
-android/app/build/outputs/apk/release/app-release.apk
+@react-navigation/native-stack
+
+@shopify/react-native-skia
+
+react-native-linear-gradient
+
+react-native-nitro-modules
+
+react-native-nitro-sqlite
+
+react-native-safe-area-context
+
+react-native-screens
+
+⭐️ I have used raect-native-nitro-sqlite for storing the data locally and stored each record in form of object entity  with fields 
+{
+id,
+recordedAt,
+duration
+}
+sorting is based on the time of creation.
+I have assumed that data can be deleted and app can have upto Thousands of past records ,thats'why uses sqlite locally and sorting is done at time of insertion.
 
